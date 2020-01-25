@@ -1,3 +1,4 @@
+#0001
 class Solution:
     def twoSum(self, nums, target) :
         h={}
