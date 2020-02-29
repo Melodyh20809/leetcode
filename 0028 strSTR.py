@@ -1,23 +1,4 @@
-"""
-class Solution:
-    def strStr(self, haystack, needle):
-        a=""
-        n=0
-        N=0
-        for i in haystack:
-            if i==needle[n]:
-                n=n+1
-                a=a+i
-            else:
-                n=0
-                a=""
-            if a==needle:
-                A=N-len(needle)+1
-                return A
-            N=N+1
-        return -1 """
-
-class Solution:
+"""class Solution:
     def strStr(self, haystack, needle):
         a=""
         A=""
@@ -48,6 +29,15 @@ class Solution:
             if A==needle:
                 D=B-len(needle)+1
                 return D
+        return -1"""
+
+class Solution:
+    def strStr(self, haystack, needle):
+        a=len(haystack)
+        b=len(needle)
+        for i in range(a-b+1):
+            if haystack[i:i+b]==needle:
+                return i
         return -1
 
 x=Solution()
